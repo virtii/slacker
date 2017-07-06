@@ -2,8 +2,9 @@
   "name": "slacker",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/app.js",
   "scripts": {
+    "build": "babel src --presets babel-preset-es2015 --out-dir dist"
   },
   "repository": {
     "type": "git",
