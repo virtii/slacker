@@ -1,5 +1,4 @@
 process.env = Object.assign(process.env, {
-  "NODE_ENV": "production",
   "PORT": "5022",
   "APP_URL": "https://blabla.virtii.com",
   "SLACK_APP_NAME": "blabla-dev",

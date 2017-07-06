@@ -6,11 +6,10 @@ export default class Slacker {
     this.appName = process.env.SLACK_APP_NAME
     this.port = process.env.PORT
     this.appUrl = process.env.APP_URL
-    this.isProduction = process.env.NODE_ENV === 'production'
   }
 
   notify(text) {
-    if (!this.isProduction) return
+    if (!this.url) return
     // console.log("send msg")
     request.post(this.url, {
          form: {
