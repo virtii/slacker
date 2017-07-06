@@ -11,6 +11,7 @@ export default class Slacker {
 
   notify(text) {
     if (!this.isProduction) return
+    console.log("send msg")
     request.post(this.url, {
          form: {
            payload: JSON.stringify({text})
@@ -18,6 +19,8 @@ export default class Slacker {
        }, (err, response) => {
          if (err) {
            console.log("err", err, response)
+         } else {
+           console.log("msg was sent")
          }
        });
   }
