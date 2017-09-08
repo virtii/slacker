@@ -5,6 +5,7 @@ export default class Slacker {
     this.url = process.env.SLACK_WEBHOOK
     this.appName = process.env.SLACK_APP_NAME
     this.port = process.env.PORT
+    this.environment = process.env.NODE_ENV
     this.appUrl = process.env.APP_URL
   }
 
@@ -28,6 +29,7 @@ export default class Slacker {
     this.notify(`
       The project *${this.appName}* was started!
       URL: ${this.appUrl}
+      NODE ENVIRONMENT: ${this.environment}
       PORT: ${this.port}
       `
     )
